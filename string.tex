@@ -1,0 +1,381 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+% \usepackage{geometry}
+\usepackage{color}
+\usepackage{todonotes}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
+}
+\definecolor{darkred}{rgb}{0.8,0,0}
+\captionsetup[subfigure]{labelformat=empty}
+\usepackage{appendixnumberbeamer}
+\usepackage{soul}
+
+
+\usefonttheme[onlymath]{serif}
+\title{Introduction to String Theory}
+\author{G\"onen\c c Mo\u gol}
+\date{2018--10--01}
+
+
+\newcommand{\rr}{\ensuremath{\mathbb R}}
+\renewcommand{\d}{\, \mathrm d}
+\renewcommand{\abs}[1]{\ensuremath{\lvert #1 \rvert}}
+\renewcommand{\L}{\ensuremath{\mathcal{L}}}
+\let\temp\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\temp
+\newcommand{\pt}{\ensuremath{\mathcal{P}^{\tau}_{\mu}}}
+\newcommand{\ps}{\ensuremath{\mathcal{P}^{\sigma}_{\mu}}}
+\newcommand{\ptt}{\ensuremath{\mathcal{P}\indices{^{\tau}^{\mu}}}}
+\newcommand{\pss}{\ensuremath{\mathcal{P}\indices{^{\sigma}^{\mu}}}}
+\newcommand{\vperp}{\ensuremath{ v_{\perp}}}
+\renewcommand{\tilde}{\widetilde}
+\renewcommand{\qc}{\quad ,}
+
+\newcommand{\red}[1]{{\color{red} #1 }}
+\newcommand{\onlyi}[2]{\only<#1>{\item #2}}
+\newcommand{\zz}{\mathbb Z}
+
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\title{Introduction to String Theor\textbf{ies}}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\title{Introduction to String Theor{ies}}
+
+\begin{frame}
+  \frametitle{Overview}
+  \tableofcontents{}
+\end{frame}
+
+\section{Motivation}
+
+
+
+\begin{frame}
+  \frametitle{Why String Theory?}
+  \begin{itemize}
+  \uncover<1>{\item {It is fun}}
+  \item<2-> \st{It is fun} \pause
+  \item UV-finite
+  \item Provides a theory of quantum gravity
+  \item Creates tools for other areas of physics and mathematics
+  \item Has the right ingredients for producing standard model
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Bosonic String}
+  
+
+  \begin{itemize}
+    \item<1-> {Units and conventions: $c=1$, $\hbar = 1$, $\eta = \mathrm{diag}(-1,+1,\dots, +1)$ }
+    \onlyi 2 { Relativistic particle Lagrangian:
+      \[ S = - m \int {\d \tau} \]}
+
+    \onlyi 3 {Relativistic particle Lagrangian:
+      \[ S = - m \int \red{\d \tau} \]}
+    \onlyi 4 {Relativistic particle Lagrangian:
+      \[ S = - \red{m} \int \d \tau \] }
+  \item<5-> Relativistic particle Lagrangian:
+    \[ S = - m \int {\d \tau} \]
+    \onlyi 5{ Generalize to an extended object:
+      \[ S = -T \int \d \mathcal{A}  \]}
+    \onlyi 6 {Generalize to an extended object:
+      \[ S = -T \int \red{\d \mathcal{A}}  \]}
+    \onlyi 7 {Generalize to an extended object:
+      \[ S = -\red T \int \d \mathcal{A}  \]}
+%  \item Add picture
+  \end{itemize}
+  
+\end{frame}
+
+\section{Bosonic String}
+
+
+
+
+\begin{frame}
+  \frametitle{Bosonic String}
+  \begin{itemize}
+  \item<1-> Manipulations of equation of motion result in wave equation
+    \item<2-> { Left and right moving weaves $X^{\mu} = 1/2\, (X^{\mu}_{L}+ X^{\mu}_{R})$}
+      \onlyi 3 {With Fourier expansions:
+        \[ X^{\mu}_{L}(\tau + \sigma) = {x^{\mu}} + \frac{ {p^{\mu}} l^{2}}{2} \cdot (\tau + \sigma) + i l \sum_{n \neq 0 } \frac 1n  \, {\alpha^{\mu}_{n}} \,  e^{-in(\tau+ \sigma)}  \]
+    \[ X^{\mu}_{R}(\tau - \sigma) = x^{\mu} + \frac{p^{\mu} l^{2}}{2} \cdot (\tau - \sigma) + i l \sum_{n \neq 0 } \frac 1n\, \tilde \alpha^{\mu}_{n} \, e^{-in(\tau- \sigma)}  \] }
+  \onlyi 4 {With Fourier expansions:
+    \[ X^{\mu}_{L}(\tau + \sigma) = {x^{\mu}} + \frac{ {p^{\mu}} \red{l^{2}}}{2} \cdot (\tau + \sigma) + i \red{l} \sum_{n \neq 0 } \frac 1n  \, {\alpha^{\mu}_{n}} \,  e^{-in(\tau+ \sigma)}  \]
+    \[ X^{\mu}_{R}(\tau - \sigma) = x^{\mu} + \frac{p^{\mu} \red{l^{2}}}{2} \cdot (\tau - \sigma) + i \red{l} \sum_{n \neq 0 } \frac 1n\, \tilde \alpha^{\mu}_{n} \, e^{-in(\tau- \sigma)}  \] }
+  \onlyi 5 { With Fourier expansions:
+    \[ X^{\mu}_{L}(\tau + \sigma) = \red{x^{\mu}} + \frac{ \red{p^{\mu}} l^{2}}{2} \cdot (\tau + \sigma) + i l \sum_{n \neq 0 } \frac 1n  \, \red{\alpha^{\mu}_{n}} \,  e^{-in(\tau+ \sigma)}  \]
+    \[ X^{\mu}_{R}(\tau - \sigma) = \red{x^{\mu}} + \frac{\red{p^{\mu} }l^{2}}{2} \cdot (\tau - \sigma) + i l \sum_{n \neq 0 } \frac 1n\,\red{ \tilde \alpha^{\mu}_{n}} \, e^{-in(\tau- \sigma)}  \] }
+
+
+\item<6-> { With Fourier expansions:
+    \[ X^{\mu}_{L}(\tau + \sigma) = {x^{\mu}} + \frac{ {p^{\mu}} l^{2}}{2} \cdot (\tau + \sigma) + i l \sum_{n \neq 0 } \frac 1n  \, {\alpha^{\mu}_{n}} \,  e^{-in(\tau+ \sigma)}  \]
+    \[ X^{\mu}_{R}(\tau - \sigma) = x^{\mu} + \frac{p^{\mu} l^{2}}{2} \cdot (\tau - \sigma) + i l \sum_{n \neq 0 } \frac 1n\, \tilde \alpha^{\mu}_{n} \, e^{-in(\tau- \sigma)}  \] }
+
+  
+\item <6-> For the closed string, $\alpha^{\mu}_{n}$ and $\tilde \alpha^{\mu}_{n}$ are independent. 
+  \end{itemize}
+\end{frame}
+
+\subsection{Quantisation}
+
+
+
+
+\begin{frame}
+  \frametitle{Quantisation}
+  \begin{itemize}
+  \item Promote Fourier modes to operators with commutation relations
+    \[ [x^{\mu}, p_{\nu} ] = i \delta^{\mu}_{\nu} \qquad [\alpha^{\mu}_{n}, \alpha^{\nu}_{m}] = n \delta_{n+m} \eta^{\mu\nu} = [\tilde \alpha^{\mu}_{n}, \tilde \alpha^{\nu}_{m}]  \] \pause
+  \item Define vacuum $\ket 0$ by imposing
+    \[ \alpha_{n}^{\mu} \ket 0 = \tilde \alpha_{n}^{\mu} \ket 0 = 0 \quad \text{for all } n>0 \]\pause
+  \item For $n>0$,  $\alpha_{n}^{\mu}$ and $\tilde \alpha^{\mu}_{n}$ are annihilation operators
+  \item For $n<0 $,   $\alpha^{\mu}_{n}$ and $\tilde \alpha^{\mu}_{n}$ are creation operators
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pretty Pictures of String Excitations}
+
+% \begin{figure}[h]
+%   \centering
+  
+%   \begin{subfigure}{0.3\textwidth}
+%     \includegraphics[width=\textwidth]{first.png}
+%     \caption{$\ket 0$}
+%   \end{subfigure}  \pause
+%   \begin{subfigure}{0.3\textwidth}
+%     \includegraphics[width=\textwidth]{second.png}
+%     \caption{\\{$\alpha^{\mu}_{-1} \tilde\alpha^{\nu}_{-1} \ket 0$}}
+%   \end{subfigure} 
+%   \begin{subfigure}{0.3\textwidth}
+%     \includegraphics[width=\textwidth]{third.png}
+%     \caption{$\alpha^{\mu}_{-2} \tilde \alpha^{\nu}_{-2} \ket 0$}
+%   \end{subfigure}
+
+% \end{figure}
+
+\end{frame}
+
+\subsection{Closed Spectrum}
+
+\begin{frame}
+\frametitle{Closed Spectrum}
+\begin{itemize}
+\item There is a level matching condition $N= \tilde N$
+\item Vacuum is a tachyon, with mass $M^{2}<0$ !
+\item First excited state is $\ket{\boldsymbol {\xi}} =  \xi_{ij} \alpha_{-1}^{i} \tilde \alpha^{j}_{-1} \ket 0  $ with $M^{2}=0$
+\item Decompose $\xi_{ij}$ in irreps
+  \[\xi_{ij} = \underbrace{\xi_{(ij)}}_{\text{symmetric}} +\underbrace{ \xi_{[ij]}}_{\text{antisymmetric}} +\underbrace{ \xi^{(0)} \delta_{ij}}_{\text{trace part}}\]
+  
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Closed Spectrum}
+  \begin{itemize}
+  \item Decompose $\xi_{ij}$ in irreps
+  \[\xi_{ij} = \underbrace{\xi_{(ij)}}_{\text{symmetric}} +\underbrace{ \xi_{[ij]}}_{\text{antisymmetric}} +\underbrace{ \xi^{(0)} \delta_{ij}}_{\text{trace part}}\]
+  \item Symmetric part describes spin 2 gauge field $\implies$ graviton!
+  \item Antisymmetric part is called \emph{Kalb-Ramon Field}.
+  \item Trace part describes the \emph{dilaton}.
+  \end{itemize}
+\end{frame}
+
+\section{Superstring}
+
+
+
+\begin{frame}
+  \frametitle{Superstring}
+  \begin{itemize}
+  \item Modify the Lagrangian to include fermionic fields
+    \[ S = S_{\text{boson}} + S_{\text{fermion}}\]
+  \item By supersymmetry, fermions are related to bosons. \pause
+  \item Supersymmetry therefore forbids a tachyonic state. \pause
+  \item For left and right moving parts, we can choose either spin 1 bosons ``B''
+  \item Or spin 1/2 fermions ``F$_{\pm}$'' with two chiralities
+
+  \end{itemize}
+  
+\end{frame}
+
+
+
+
+\begin{frame}
+  \frametitle{Decomposition into Irreps}
+  \begin{itemize}
+  \item (B,B) = Dilaton $\oplus$ 2-Form Field (Kalb-Ramon) $\oplus$ Graviton
+  \item (F$_\pm$, F$_{\pm}$) = certain $k$-form Fields
+  \item (B,F$_{+}$) = Dilatino $\oplus$ Gravitino
+  \item (B,F$_{-}$) = Dilatino $\oplus$ Gravitino (with different chirality)
+  \end{itemize}
+\end{frame}
+
+\subsection{Type IIA/B}
+
+
+
+\begin{frame}
+  \frametitle{Type IIA/B}
+  \begin{itemize}
+  \item Consistency conditions limit the sectors that one can choose. \pause
+  \item Type IIB consists of
+    \begin{itemize}
+    \item (B,B): Dilaton, Kalb-Ramon, Graviton
+    \item (F$_{+}$,F$_{+}$): $k$-form Fields
+    \item (B,F$_{+}$): Dilatino, Gravitino
+    \item (F$_{+}$,B): Dilatino, Gravitino
+    \end{itemize}\pause
+    
+  \item Type IIA consists of
+    \begin{itemize}
+    \item (B,B): Dilaton, Kalb-Ramon, Graviton
+    \item (F$_{+}$,F$_{-}$): $k$-form Fields
+    \item (B,F$_{-}$): Dilatino, Gravitino (different chirality)
+    \item (F$_{+}$,B): Dilatino, Gravitino
+    \end{itemize}
+
+  \end{itemize}
+\end{frame}
+
+\subsection{Type I}
+
+
+
+\begin{frame}
+  \frametitle{Type I}
+  \begin{itemize}
+  \item Type IIB consists of
+    \begin{itemize}
+    \item (B,B): Dilaton, Kalb-Ramon, Graviton
+    \item (F$_{+}$,F$_{+}$): $k$-form Fields
+    \item (B,F$_{+}$): Dilatino, Gravitino
+    \item (F$_{+}$,B): Dilatino, Gravitino
+    \end{itemize}  \item Type IIB theory is invariant under exchanging left and right movers. \pause
+  \item We call this symmetry $\Omega$, then \emph{closed spectrum} of type I theory is $\text{IIB}/\Omega$ i.e. it consists of
+    \begin{itemize}
+    \item Dilaton, Graviton
+    \item Some of the $k$-form fields
+    \item Dilatino, Gravitino
+    \end{itemize}
+\item The closed spectrum of type I theory is inconsistent by itself
+\item Add open strings with gauge group $SO(32)$ to complete type I theory.
+\item Type I theory is in some sense ``half'' of Type IIB theory.
+\end{itemize}
+  
+  
+  
+\end{frame}
+
+\subsection{Heterotic Strings}
+
+
+
+\begin{frame}
+  \frametitle{Heterotic Strings}
+  \begin{itemize}
+  \item There are yet another consistent theories, which takes bosonic strings on left moving and supersymmetric strings on right moving sector.
+  \item Bosonic part is compactified
+  \item This gives two new theories with gauge groups $SO(32)$ and $E_{8} \times E_{8}$
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+      \frametitle{Bibliography}
+    \begin{thebibliography}{}
+    \bibitem{article}
+      Weigand, Timo
+      \textit{Introduction to String Theory, Lecture Notes}\\
+    \end{thebibliography}
+\end{frame}
+
+
+\appendix
+
+\begin{frame}
+  \frametitle{Ramon and Neveu-Schwarz Sectors}
+  \begin{itemize}
+  \item If $\psi_{L,R} (\sigma) = + \psi_{L,R}(\sigma+ 2\pi)$ then $\psi$ is in \emph{Ramon sector} with \alert{integer} Fourier expansion
+    \[ \psi_{R}^{\mu} = \sum_{n\in \zz}  b_{n}^{\mu} e^{-in(\tau-\sigma)}   
+      \qquad \psi_{L}^{\mu} = \sum_{n\in \zz}  \tilde b_{n}^{\mu} e^{-in(\tau+\sigma)}   \]
+  \item If $\psi_{L,R} (\sigma) = - \psi_{L,R}(\sigma+ 2\pi)$ then $\psi$ is in \emph{Neveu-Schwarz sector} with \alert{half integer} Fourier expansion
+    \[ \psi_{R}^{\mu} = \sum_{r \in \zz+ \frac 12}  b_{r}^{\mu} e^{-ir(\tau-\sigma)}   
+      \qquad \psi_{L}^{\mu} = \sum_{r \in \zz+\frac 12}  \tilde b_{r}^{\mu} e^{-ir(\tau+\sigma)}   \]
+    
+  \item So there are total of 4 choices possible:$\text{ (NS,NS) (NS,R) (R,NS) (R,R)}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Quantisation}
+  \begin{itemize}
+  \item Promote Fourier modes to operators with anti-commutation relations
+    \[ \{b^{\mu}_{n}, b^{\nu}_{m}\} = \eta^{\mu\nu} \delta_{n+m} =  \{ \tilde b^{\mu}_{n}, \tilde b^{\nu}_{m}\}  \]
+  \item Define Vacua:
+    \[ \alpha_{n}^{\mu} \ket 0_{NS} = b^{\mu}_{r} \ket 0_{NS} = \tilde b^{\mu}_{r} \ket 0_{NS} = 0 \quad \forall n,r>0  \]
+    \[ \alpha_{n}^{\mu} \ket 0_{R} = b_{m}^{\mu} \ket 0_{R} = \tilde b^{\mu}_{m} \ket 0_{NS} = 0 \quad \forall n,m >0    \]
+
+  \item \alert{Improtant:} NS ground state is well defined and is a space-time scalar. However, R ground state is degenerate as
+    \[ b^{\mu}_{m} b^{\nu}_{0} \ket 0 _{R} = - b^{\nu}_{0} b^{\mu}_{m} \ket 0_{R} = 0  \]
+  \item Because of this degeneracy, one can show that $\ket 0_{R}$ is a fermion.
+    
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Massless Spectrum}
+  \begin{itemize}
+  \item Recall that $\ket 0_{R}$ is a fermion and $\ket 0_{NS}$ is a scalar.
+  \end{itemize}
+  \center{    \renewcommand*{\arraystretch}{1.4}
+  \begin{tabular}{c|c|c}
+    Sector (L,R) & State & $SO(8) $ rep \\
+    \hline 
+    (NS,NS) & $b^{i}_{-1/2} \ket 0_{NS} \otimes \tilde b^{i}_{-1/2} \ket 0_{NS}$ & $8_{v} \otimes 8_{v}$ \pause \\
+                 (R$_{+}$,R$_{+}$)& $\ket +_{R} \otimes \ket +_{R}$ & $8_{s} \otimes 8_{s}$  \\
+    (R$_{+}$,R$_{-}$)& $\ket +_{R} \otimes \ket -_{R}$ & $8_{s} \otimes 8_{c}$ \\
+    (R$_{-}$,R$_{-}$)& $\ket -_{R} \otimes \ket -_{R}$& $8_{c} \otimes 8_{c}$ \pause \\
+    (NS,R$_{+}$) & $b^{i}_{-1/2} \ket 0 _{NS} \otimes \ket + _{R}$ & $8_{v} \otimes 8_{s}$ \\
+    (NS,R$_{-}$) & $b^{i}_{-1/2} \ket 0 _{NS} \otimes \ket - _{R}$ & $8_{v} \otimes 8_{c}$
+  \end{tabular} }
+\end{frame}
+
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
